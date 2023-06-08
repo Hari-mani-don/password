@@ -16,7 +16,7 @@ int check_password(char *password){
     int numericCount=0;
     int length = strlen(password);
    
-
+    //check each character in the password
    /*
     for(int i=0; i<length;i++){
          if(password[i]>='A' && password[i]<='Z'){
