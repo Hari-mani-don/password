@@ -1,3 +1,42 @@
+/* Alogrithm :
+1.start the program.
+2.Declare the necdssary variables for password checking: 'password', 'rank',
+'uppercaseCount', 'lowercaseCount', 'symbolCount', 'numericcount', and 'length'.
+3.Get the password input from the user.
+4.Calculate the length of the password using the 'strlen()' function.
+5.Initialize all the counters('uppercaseCount', 'lowercaseCount','symbolCount', 'numericCount') to zero.
+6.Iterate over each character in the password using a loop.
+  a.check if the character is an uppercase letter using the condition'(password[i] >= 'A'
+   && password[i] <= 'Z'). If true, increment 'uppercaseCount' by 1
+  b.Check if the character is a lowercase letter using the condition '(password[i] >= 'a' &&
+  password[i] <= 'z') . If true, increment 'lowercaseCount' by 1.
+  c.Check if the character is a symbol (non-alphanumeric) using the condition "(!
+  (password[i] >= 'A' && password[i] <= 'Z') & !(password[i] >= 'a' && 
+  password[i] <= 'z') && !(password[i] >= '0' && password[i] <= '9'))". If true,
+  increment 'symbolCount' by 1.
+  d.Check for three consecutive numeric characters using the condition
+  '(isNumeric (password[i]) && isNumeric(password[i+1] && isNumeric(password[i+2])). If true,
+  increment 'numericCount' by 1.
+7.Evaluate the password strength based on the given conditions:
+  a.If the length of the password is at least 8 characters, increment 'rank' by 1.
+  b.If 'uppercaseCount' is greater than 0, increment 'rank' by 1.
+  c.If 'lowercaseCount' is greater than or equal to 3, increment 'rank' by 1.
+  d.If 'symbolCount' is greater than 0, increment 'rank' by 1.
+  e.If 'numericCount' is greater than 0, increment 'rank' by 1.
+8.Print the password strength message based on the value of 'rank':
+  a.If 'rank' is 0, print"Weakest password".
+  b.If 'rank' is 1, print "Weak password".
+  c.If 'rank' is 2, print"Average password".
+  d.If 'rank' is 3, print"Medium password".
+  e.If 'rank' is 4, print"Strong password".
+  f.If 'rank' is 5, print"Strongest password".
+  g.If'rank' is not within the above range, print "Invalid rank".
+9,End the program.
+
+*/
+
+
+
 #include<stdio.h>
 #include<string.h>
 #include<stdbool.h>
@@ -117,6 +156,7 @@ int main(){
     default:
     printf("Invalid rank\n");
         break;
-    }
+  
+      }
 
 }
