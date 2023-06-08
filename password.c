@@ -16,9 +16,9 @@ int check_password(char *password){
     int numericCount=0;
     int length = strlen(password);
    
-    //check each character in the password
+    //check each character in the password method 1
    /*
-    for(int i=0; i<length;i++){
+    for(int i=0; i<length;i++)
          if(password[i]>='A' && password[i]<='Z'){
          uppercaseCount++;   
           }
@@ -36,7 +36,7 @@ int check_password(char *password){
     }
 */
 
-
+     //check each character in the password method 2
     for(int i=0; i<length; i++){
 
         if (isupper(password[i])){
